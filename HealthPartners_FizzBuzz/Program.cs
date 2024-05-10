@@ -20,7 +20,7 @@ string read = Console.ReadLine() ?? "noInputError";
 
 try
 {
-    if (read != null && string.IsNullOrEmpty(read))
+    if (read != null)
     {
         switch (read)
         {

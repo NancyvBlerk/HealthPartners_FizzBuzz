@@ -8,28 +8,71 @@ namespace HealthPartners_FizzBuzz
 {
     internal class Functionality
     {
-        public StringBuilder MyOwn() 
+        public StringBuilder MyOwn()
         {
-            StringBuilder sb = new(); 
+            StringBuilder sb = new();
 
+            bool t3, y5;
 
+            for (int i = 0; i < 100; i++)
+            {
+                t3 = isDevisable3(i);
+                y5 = isDevisable5(i);
+                switch (t3, y5)
+                {
+                    case (true, true):
+                        sb.AppendLine("FizzBuzz");
+                        break;
+                    case (false, false):
+                        sb.AppendLine(i.ToString());
+                        break;
+                    case (true, false):
+                        sb.AppendLine("Fizz");
+                        break;
+                    case (false, true):
+                        sb.AppendLine("Buzz");
+                        break;
+                }
+            }
 
             return sb;
         }
 
-        public StringBuilder StackOverflow() 
+        public StringBuilder StackOverflow()
         {
             StringBuilder sb = new();
 
             return sb;
         }
 
-        public StringBuilder DocExample() 
+        public StringBuilder DocExample()
         {
             StringBuilder sb = new();
 
             return sb;
         }
+
+        private bool isDevisable5(int number)
+        {
+            if (number == 0 && number % 5 == 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        private bool isDevisable3(int number)
+        {
+            if (number == 0 && number % 3 == 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+
     }
+
+
 
 }
