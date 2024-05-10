@@ -14,7 +14,7 @@ namespace HealthPartners_FizzBuzz
 
             bool t3, y5;
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 1; i < 101; i++)
             {
                 t3 = isDevisable3(i);
                 y5 = isDevisable5(i);
@@ -54,7 +54,7 @@ namespace HealthPartners_FizzBuzz
 
         private bool isDevisable5(int number)
         {
-            if (number == 0 && number % 5 == 0)
+            if (number != 0 && number % 5 == 0)
             {
                 return true;
             }
@@ -63,7 +63,7 @@ namespace HealthPartners_FizzBuzz
 
         private bool isDevisable3(int number)
         {
-            if (number == 0 && number % 3 == 0)
+            if (number != 0 && number % 3 == 0)
             {
                 return true;
             }

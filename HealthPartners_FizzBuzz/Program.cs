@@ -38,6 +38,7 @@ try
                 break;
         }
 
+        Console.WriteLine();
         Console.WriteLine(funcBob);
     }
     else
