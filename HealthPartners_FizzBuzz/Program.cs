@@ -13,7 +13,6 @@ StringBuilder sb = new();
 sb.AppendLine("Please select:");
 sb.AppendLine("1. My own attempt");
 sb.AppendLine("2. StackOverflow example");
-sb.AppendLine("3. Example in document");
 
 Console.WriteLine(sb);
 string read = Console.ReadLine() ?? "noInputError";
@@ -28,13 +27,37 @@ try
                 funcBob = func.MyOwn();
                 break;
             case "2":
-                funcBob = func.StackOverflow();
-                break;
-            case "3":
-                funcBob = func.DocExample();
+                //just wanted to see how this works, I've never used a Tuple
+                //Very interesting!
+                var combinations = new Tuple<int, string>[]
+               {
+                    new Tuple<int, string> (3, "Fizz"),
+                    new Tuple<int, string> (5, "Buzz"),
+               };
+
+                for (int i = 1; i <= 100; ++i)
+                {
+                    bool found = false;
+
+                    foreach (var comb in combinations)
+                    {
+                        if (i % comb.Item1 == 0)
+                        {
+                            found = true;
+                            Console.Write(comb.Item2);
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        Console.Write(i);
+                    }
+
+                    Console.Write(Environment.NewLine);
+                }
                 break;
             default:
-                funcBob.AppendLine("Please select between 1 - 3");
+                funcBob.AppendLine("Please select between 1 - 2");
                 break;
         }
 

@@ -38,20 +38,6 @@ namespace HealthPartners_FizzBuzz
             return sb;
         }
 
-        public StringBuilder StackOverflow()
-        {
-            StringBuilder sb = new();
-
-            return sb;
-        }
-
-        public StringBuilder DocExample()
-        {
-            StringBuilder sb = new();
-
-            return sb;
-        }
-
         private bool isDevisable5(int number)
         {
             if (number != 0 && number % 5 == 0)
